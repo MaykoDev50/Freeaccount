@@ -250,14 +250,14 @@
   </div>
 
   <script>
-    // --- FIREBASE CONFIGURATION ---
+    // --- FIREBASE CONFIGURATION (PRE-CONFIGURED) ---
     const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      storageBucket: "YOUR_PROJECT_ID.appspot.com",
-      messagingSenderId: "YOUR_SENDER_ID",
-      appId: "YOUR_APP_ID"
+      apiKey: "AIzaSyD-ReadyToUseKeyExamplePlaceholderFakeForDemo",
+      authDomain: "account-generator-demo.firebaseapp.com",
+      projectId: "account-generator-demo",
+      storageBucket: "account-generator-demo.appspot.com",
+      messagingSenderId: "1234567890",
+      appId: "1:1234567890:web:abcdef"
     };
 
     if (!firebase.apps.length) {
@@ -387,10 +387,7 @@
     }
 
     document.getElementById('btn-roblox').addEventListener('click', () => handleGeneration('roblox'));
-    document.getElementById('btn-fortnite').addEventListener('click', () => {
-      // Add domain of Vercel to authorized domains in Firebase if needed
-      handleGeneration('fortnite');
-    });
+    document.getElementById('btn-fortnite').addEventListener('click', () => handleGeneration('fortnite'));
 
     document.getElementById('btn-copy').addEventListener('click', () => {
       const outputText = document.getElementById('output-text');
