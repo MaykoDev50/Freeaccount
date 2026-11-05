@@ -12,7 +12,6 @@
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --accent: #2563eb;
-      --accent-hover: #1d4ed8;
       --roblox-color: #dc2626;
       --fortnite-color: #7c3aed;
     }
@@ -388,7 +387,10 @@
     }
 
     document.getElementById('btn-roblox').addEventListener('click', () => handleGeneration('roblox'));
-    document.getElementById('btn-fortnite').addEventListener('click', () => handleGeneration('fortnite'));
+    document.getElementById('btn-fortnite').addEventListener('click', () => {
+      // Add domain of Vercel to authorized domains in Firebase if needed
+      handleGeneration('fortnite');
+    });
 
     document.getElementById('btn-copy').addEventListener('click', () => {
       const outputText = document.getElementById('output-text');
